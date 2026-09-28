@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#121212">
+  <title>Meu Treino</title>
+  <link rel="icon" href="files/img/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <img src="files/img/logo.png" alt="Logo Meu Treino" class="logo">
+      <div>
+        <h1>MEU TREINO</h1>
+        <p>Cargas e repetições</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="tela-treino" class="tela ativa"></section>
+      <section id="tela-exercicios" class="tela"></section>
+      <section id="tela-config" class="tela">
+        <h2 class="titulo-tela">Configurações</h2>
+        <div class="lista-config">
+          <label class="linha-config">
+            <span>Tema escuro</span>
+            <input type="checkbox" id="switch-tema" checked>
+            <span class="switch"></span>
+          </label>
+          <button class="linha-config botao-linha" id="btn-restaurar">Restaurar exercícios padrão</button>
+          <button class="linha-config botao-linha perigo" id="btn-limpar">Limpar todos os dados</button>
+        </div>
+        <p class="versao">Meu Treino · versão 1.0</p>
+      </section>
+    </main>
+
+    <nav class="nav-inferior">
+      <button data-tela="treino" class="ativo"><svg viewBox="0 0 24 24"><path d="M6 8v8M3 10v4M18 8v8M21 10v4M6 12h12"/></svg>Treino</button>
+      <button data-tela="exercicios"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Exercícios</button>
+      <button data-tela="config"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>Ajustes</button>
+    </nav>
+  </div>
+
+  <!-- Modal (usado para editar, adicionar e confirmar) -->
+  <div class="overlay" id="overlay" hidden>
+    <div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="fotos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
